@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+
+  display: grid;
+  place-items: center;
+  height: 100vh;
+
+  background: linear-gradient(45deg, #190361, #bb00ff);
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+main {
+  background: #fff;
+  padding: 4.8rem 6.4rem 4.8rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.8);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: min(90%, 42.8rem);
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  color: #34355b;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.screen1,
+.screen2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.hide {
+  display: none;
+}
+
+.screen1 p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.5rem;
+  color: #34355b;
+  text-align: center;
+}
+
+.screen1 img {
+  margin-bottom: 1.6rem;
+}
+
+.screen1 img:hover {
+  cursor: pointer;
+
+  animation: shake-and-turn 0.4s infinite;
+}
+
+@keyframes shake-and-turn {
+  0%,
+  100% {
+    transform: translateY(-0.3rem) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-0.3rem) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(0.3rem) rotate(3deg);
+  }
+  75% {
+    transform: translateY(-0.3rem) rotate(-3deg);
+  }
+}
+
+/* screen 2*/
+.phrase-container {
+  background-color: #e4edf1;
+  padding: 1rem;
+
+  animation: increase 3s;
+}
+
+.phrase-container p {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.4rem;
+  color: #000000;
+  text-align: center;
+}
+
+.screen2 button {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
+  background-color: #ff9500;
+
+  padding: 1.6rem;
+  border-radius: 0.4rem;
+  border: none;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s;
+}
+
+.screen2 button:hover {
+  background-color: #ff5e00;
+}
+
+@keyframes increase {
+  from {
+    transform: translateY(150%) scale(0.1);
+  }
+  to {
+    transform: scale(1) translateY(0);
+  }
+}
